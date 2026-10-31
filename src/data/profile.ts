@@ -3,7 +3,7 @@ export const profile = {
   nickname: "Glen Sofian",
   role: "Software Engineer",
   headline: "Web & Mobile Developer",
-  location: "Jakarta, Indonesia",
+  location: "Jakarta Selatan, Indonesia",
 
   email: "glenpardede76@gmail.com",
 

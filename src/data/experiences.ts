@@ -17,11 +17,11 @@ export const experiences: Experience[] = [
   {
     id: 1,
     role: "Software Engineer Intern",
-    company: "Nama Perusahaan",
+    company: "PT Asix Indonesia Cerdas",
     type: "Internship",
-    location: "Indonesia",
-    startDate: "Jan 2026",
-    endDate: "Mar 2026",
+    location: "Jakarta Pusat, Indonesia",
+    startDate: "Aug 2025",
+    endDate: "Jan 2026",
     current: false,
     description:
       "Contributed to software development projects and collaborated with the team to build application features.",
@@ -30,6 +30,6 @@ export const experiences: Experience[] = [
       "Collaborated with team members to solve technical problems.",
       "Improved code quality and application usability.",
     ],
-    technologies: ["TypeScript", "React", "Git"],
+    technologies: ["Python", "AngularJS", "Tailwind Css", "Git", "Dbeaver", "Bottle.py", "ClientRest"],
   },
 ];
