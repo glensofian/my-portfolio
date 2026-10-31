@@ -59,12 +59,12 @@ function ProjectLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-/* ── Project card ──────────────────────────────────────────── */
+/* Project card */
 import Image from "next/image";
 import { useState } from "react";
 import { projects, type Project } from "@/data/project";
 
-/* ── All unique categories ─────────────────────────────────── */
+/* All unique categories */
 const ALL_CATEGORIES = ["All", ...Array.from(new Set(projects.map((p) => p.category)))] as const;
 
 function ProjectCard({ project }: { project: Project }) {
@@ -123,7 +123,7 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-/* ── Projects Section ──────────────────────────────────────── */
+/* Projects Section */
 export default function Project() {
   const [activeCategory, setActiveCategory] = useState("All");
 

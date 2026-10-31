@@ -1,38 +1,38 @@
 export interface SkillCategory {
   category: string;
-  icon: string;
+  iconName: string;
   skills: string[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
     category: "Frontend",
-    icon: "🖥️",
+    iconName: "ComputerDesktopIcon",
     skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS"],
   },
   {
     category: "Mobile",
-    icon: "📱",
+    iconName: "DevicePhoneMobileIcon",
     skills: ["React Native", "Expo", "SQLite", "NetInfo"],
   },
   {
     category: "Backend",
-    icon: "⚙️",
+    iconName: "CogIcon",
     skills: ["FastAPI", "Laravel", "Python", "PHP", "Node.js"],
   },
   {
     category: "Database",
-    icon: "🗄️",
+    iconName: "CircleStackIcon",
     skills: ["PostgreSQL", "MySQL", "SQLite"],
   },
   {
     category: "AI / ML",
-    icon: "🤖",
+    iconName: "CpuChipIcon",
     skills: ["LangChain", "RAG", "Fine-tuning", "GGUF", "Jupyter Notebook"],
   },
   {
     category: "DevOps & Tools",
-    icon: "🛠️",
+    iconName: "WrenchScrewdriverIcon",
     skills: ["Docker", "Git", "GitHub", "Figma", "Adobe Photoshop", "Blender"],
   },
 ];
