@@ -4,14 +4,10 @@ import Image from "next/image";
 import {
   ArrowRightIcon,
   EnvelopeIcon,
-  MapPinIcon,
-  BriefcaseIcon,
-  CodeBracketIcon,
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import { profile } from "@/data/profile";
 
-/* ── GitHub icon (not in Heroicons, keep as brand SVG) ─────── */
 function GitHubIcon({ size = 18 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -20,7 +16,6 @@ function GitHubIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-/* ── LinkedIn icon (brand SVG) ─────────────────────────────── */
 function LinkedInIcon({ size = 18 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -29,7 +24,6 @@ function LinkedInIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-/* ── Social link button ────────────────────────────────────── */
 function SocialLink({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
   return (
     <a
@@ -70,7 +64,7 @@ function SocialLink({ href, label, children }: { href: string; label: string; ch
   );
 }
 
-/* ── Availability badge ────────────────────────────────────── */
+/* Availability badge */
 function AvailabilityBadge() {
   return (
     <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.4rem 1rem", background: "rgba(36, 81, 168, 0.12)", border: "1px solid rgba(96, 144, 223, 0.25)", borderRadius: "9999px" }}>
@@ -81,7 +75,7 @@ function AvailabilityBadge() {
   );
 }
 
-/* ── Profile photo (right column) ─────────────────────────── */
+/* Profile photo */
 function ProfilePhoto() {
   return (
     <div
@@ -119,7 +113,7 @@ function ProfilePhoto() {
   );
 }
 
-/* ── Hero Section ──────────────────────────────────────────── */
+/* Hero Section */
 export default function Hero() {
   return (
     <section
@@ -137,7 +131,6 @@ export default function Hero() {
         className="container"
         style={{ position: "relative", zIndex: 1, paddingBlock: "4rem", display: "grid", gridTemplateColumns: "1fr auto", gap: "4rem", alignItems: "center" }}
       >
-        {/* ── Left: Text content ──────────────────────────── */}
         <div>
           <div className="animate-fade-in-up" style={{ marginBottom: "1.75rem" }}>
             <AvailabilityBadge />
@@ -171,7 +164,7 @@ export default function Hero() {
               View Projects
               <ArrowRightIcon style={{ width: 16, height: 16 }} aria-hidden />
             </a>
-            <a href={`mailto:${profile.email}`} className="btn-outline">
+            <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer" className="btn-outline">
               <EnvelopeIcon style={{ width: 16, height: 16 }} aria-hidden />
               Get In Touch
             </a>
@@ -186,13 +179,13 @@ export default function Hero() {
             <SocialLink href={profile.social.linkedin} label="LinkedIn profile">
               <LinkedInIcon size={18} />
             </SocialLink>
-            <SocialLink href={`mailto:${profile.email}`} label="Send email">
+            <SocialLink href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} label="Send email">
               <EnvelopeIcon style={{ width: 18, height: 18 }} aria-hidden />
             </SocialLink>
           </div>
         </div>
 
-        {/* ── Right: Profile photo ─────────────────────── */}
+        {/* Right: Profile photo */}
         <ProfilePhoto />
       </div>
 

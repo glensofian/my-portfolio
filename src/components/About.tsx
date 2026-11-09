@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { profile } from "@/data/profile";
 
-/* ── Icon map for info grid ────────────────────────────────── */
+/* Icon map for info grid */
 const INFO_ITEMS = [
   { icon: MapPinIcon,       label: "Location", value: profile.location },
   { icon: BriefcaseIcon,    label: "Role",     value: profile.role },
@@ -16,7 +16,7 @@ const INFO_ITEMS = [
   { icon: RocketLaunchIcon, label: "Status",   value: profile.availability },
 ] as const;
 
-/* ── Stat card ─────────────────────────────────────────────── */
+/* Stat card */
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
     <div style={{ textAlign: "center", padding: "1.25rem 1rem", background: "rgba(36, 81, 168, 0.12)", border: "1px solid var(--border)", borderRadius: "0.75rem" }}>
@@ -26,7 +26,7 @@ function StatCard({ value, label }: { value: string; label: string }) {
   );
 }
 
-/* ── About Section ─────────────────────────────────────────── */
+/* About Section */
 export default function About() {
   return (
     <section id="about" className="section" style={{ background: "var(--bg-secondary)" }}>
@@ -75,9 +75,9 @@ export default function About() {
 
           {/* Stats row */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
-            <StatCard value="8+" label="Projects Built" />
-            <StatCard value="3+"  label="Tech Stacks" />
-            <StatCard value="2+"  label="Years Learning" />
+            <StatCard value="8" label="Projects Built" />
+            <StatCard value="3"  label="Tech Stacks" />
+            <StatCard value="2"  label="Years Learning" />
           </div>
 
         </div>

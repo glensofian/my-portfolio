@@ -159,7 +159,7 @@ export default function CV() {
           <div className="divider" />
           <h2 className="section-title">Curriculum Vitae</h2>
           <p className="section-subtitle">
-            Lihat ringkasan lengkap pengalaman, pendidikan, dan keahlian saya. Download atau preview langsung di sini.
+            View a complete summary of my experience, education, and skills. Download or preview it directly here.
           </p>
         </div>
 

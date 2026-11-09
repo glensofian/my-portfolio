@@ -2,7 +2,7 @@ export interface Project {
   id: number;
   name: string;
   description: string;
-  category: string;
+  category: string[];
   technologies: string[];
   image: string;
   github: string;
@@ -16,7 +16,11 @@ export const projects: Project[] = [
     name: "ToFa AI",
     description:
       "AI-based agricultural assistant website for local farmers in the Lake Toba region.",
-    category: "AI / Web Developer",
+    category: [
+      "AI Development",
+      "Web Developer",
+      "UI/UX Design",
+    ],
     technologies: [
       "React",
       "JavaScript",
@@ -38,7 +42,11 @@ export const projects: Project[] = [
     name: "ToFa AI - Mobile",
     description:
       "AI-based agricultural assistant Mobile App for local farmers in the Lake Toba region.",
-    category: "AI / Mobile Developer",
+    category: [
+      "AI Development",
+      "Mobile Developer",
+      "UI/UX Design",
+    ],
     technologies: [
       "ReactNative",
       "NetInfo",
@@ -59,7 +67,10 @@ export const projects: Project[] = [
     name: "Career Alumni Information System",
     description:
       "Managing the work of all UI/UX team members to create mockup designs for websites and mobile designs using figma.",
-    category: "UI/UX Designer, UI/UX Team Lead",
+    category: [
+      "UI/UX Designer",
+      "UI/UX Team Lead",
+    ],
     technologies: ["Figma", "Adobe Photoshop"],
     image: "/images/Cais.png",
     github: "-",
@@ -71,7 +82,9 @@ export const projects: Project[] = [
     name: "Parent-Student Information System",
     description:
       "making mockup designs for the website using figma. An interactive and responsive design that can be used as a benchmark for website devel",
-    category: "UI/UX Designer",
+    category: [
+      "UI/UX Designer"
+    ],
     technologies: ["Figma", "Adobe Photoshop"],
     image: "/images/SiS.png",
     github: "https://github.com/mitsuha19/SIS_Kel3.git",
@@ -83,7 +96,10 @@ export const projects: Project[] = [
     name: "Find Me In Pniel",
     description:
       "Creating a horror game and producing all the assets in either 3D or 2D.",
-    category: "2D/3D Artits, Game Developer",
+    category: [
+      "2D/3D Artits",
+      "Game Developer",
+    ],
     technologies: ["Blender", "Notion", "Adobe Photoshop", "Unity"],
     image: "/images/FindMeInPniel.png",
     github: "https://github.com/mitsuha19/LYNCH-VIEX.git",
@@ -95,7 +111,7 @@ export const projects: Project[] = [
     name: "By Course",
     description:
       "Course management platform integrated with Delcom APP RESTful APIs to manage courses, instructors, and participants with dynamic React interface and role-based admin controls.",
-    category: "Web Developer",
+    category: ["Web Developer"],
     technologies: ["React", "JavaScript", "RESTful API", "Delcom API"],
     image: "/images/ByCourse.png",
     github: "Not Open Source",
@@ -107,7 +123,7 @@ export const projects: Project[] = [
     name: "PKM - SMAN 1 Balige",
     description:
       "The first project of the course, where I served as a full-stack developer and helped build a website for a high school.",
-    category: "Web Developer",
+    category: ["Web Developer"],
     technologies: ["Laravel 11", "PHP", "MySQL", "Bootstrap"],
     image: "/images/PKM-SMAN1.png",
     github: "Not Open Source",
@@ -117,8 +133,8 @@ export const projects: Project[] = [
   {
     id: 8,
     name: "NBA Match Predictor",
-    description: "",
-    category: "Web Developer",
+    description: "Building a Python-based prediction application that utilizes open-source datasets to generate win predictions based on the data.",
+    category: ["Web Developer"],
     technologies: ["pyhton", "Jupiter Notebook"],
     image: "/images/NBA-Predictor.png",
     github: "https://github.com/glensofian/NBA-Match-Predictor.git",

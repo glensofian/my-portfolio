@@ -3,12 +3,9 @@
 import {
   ArrowRightIcon,
   EnvelopeIcon,
-  CodeBracketSquareIcon,
-  LinkIcon,
 } from "@heroicons/react/24/outline";
 import { profile } from "@/data/profile";
 
-/* ── GitHub icon (brand) ───────────────────────────────────── */
 function GitHubIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -17,7 +14,6 @@ function GitHubIcon() {
   );
 }
 
-/* ── LinkedIn icon (brand) ─────────────────────────────────── */
 function LinkedInIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -26,7 +22,6 @@ function LinkedInIcon() {
   );
 }
 
-/* ── Contact info item ─────────────────────────────────────── */
 function ContactItem({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: string; href: string }) {
   return (
     <a
@@ -69,7 +64,7 @@ function ContactItem({ icon, label, value, href }: { icon: React.ReactNode; labe
   );
 }
 
-/* ── Contact Section ───────────────────────────────────────── */
+/* Contact Section */
 export default function Contact() {
   return (
     <section id="contact" className="section" style={{ background: "var(--bg-primary)" }}>
@@ -93,7 +88,7 @@ export default function Contact() {
               icon={<EnvelopeIcon style={{ width: 22, height: 22 }} />}
               label="Email"
               value={profile.email}
-              href={`mailto:${profile.email}`}
+              href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`}
             />
             <ContactItem
               icon={<LinkedInIcon />}
@@ -120,7 +115,7 @@ export default function Contact() {
             <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.7, marginBottom: "1.5rem" }}>
               Whether you have a project in mind or just want to say hello, my inbox is always open.
             </p>
-            <a href={`mailto:${profile.email}`} className="btn-primary" style={{ display: "inline-flex", justifyContent: "center" }}>
+            <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ display: "inline-flex", justifyContent: "center" }}>
               Send a Message
               <ArrowRightIcon style={{ width: 16, height: 16 }} aria-hidden />
             </a>

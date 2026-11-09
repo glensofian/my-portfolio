@@ -200,7 +200,9 @@ export default function Navbar() {
             );
           })}
           <a
-            href={`mailto:${profile.email}`}
+            href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             style={{ padding: "0.5rem 1.2rem", fontSize: "0.85rem", marginLeft: "0.75rem" }}
           >
@@ -284,7 +286,9 @@ export default function Navbar() {
             );
           })}
           <a
-            href={`mailto:${profile.email}`}
+            href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             style={{ alignSelf: "flex-start", marginTop: "0.5rem" }}
           >

@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ArrowTopRightOnSquareIcon,
   CodeBracketIcon,
   ComputerDesktopIcon,
   DevicePhoneMobileIcon,

@@ -1,14 +1,11 @@
 "use client";
 
 import {
-  ArrowRightIcon,
-  EnvelopeIcon,
   CodeBracketSquareIcon,
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
-import { profile } from "@/data/profile";
 
-/* ── Link button helper ────────────────────────────────────── */
+/* Link button helper */
 function ProjectLink({ href, label }: { href: string; label: string }) {
   const isDisabled = !href || href === "-" || href === "Not Open Source";
 
@@ -64,8 +61,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { projects, type Project } from "@/data/project";
 
-/* All unique categories */
-const ALL_CATEGORIES = ["All", ...Array.from(new Set(projects.map((p) => p.category)))] as const;
+/* All unique categories*/
+const ALL_CATEGORIES = [
+  "All",
+  ...Array.from(new Set(projects.flatMap((p) => p.category))),
+];
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -94,7 +94,7 @@ function ProjectCard({ project }: { project: Project }) {
       <div style={{ padding: "1.25rem 1.5rem 1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem", flex: 1 }}>
         <div>
           <p style={{ fontSize: "0.72rem", color: "var(--accent)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.3rem" }}>
-            {project.category}
+            {project.category.join(" · ")}
           </p>
           <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.3 }}>
             {project.name}
@@ -129,7 +129,7 @@ export default function Project() {
 
   const filtered = activeCategory === "All"
     ? projects
-    : projects.filter((p) => p.category === activeCategory);
+    : projects.filter((p) => p.category.includes(activeCategory));
 
   return (
     <section id="projects" className="section" style={{ background: "var(--bg-secondary)" }}>
