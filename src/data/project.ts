@@ -19,7 +19,7 @@ export const projects: Project[] = [
     category: [
       "AI Development",
       "Web Developer",
-      "UI/UX Design",
+      "UI/UX Designer",
     ],
     technologies: [
       "React",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     category: [
       "AI Development",
       "Mobile Developer",
-      "UI/UX Design",
+      "UI/UX Designer",
     ],
     technologies: [
       "ReactNative",
